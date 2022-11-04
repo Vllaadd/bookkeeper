@@ -3,6 +3,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import App from "./App";
 import Expenses from './components/expenses';
 import Invoices from './components/invoices';
+import Invoice from './components/invoice';
 
 const root = document.getElementById('root');
 render(
