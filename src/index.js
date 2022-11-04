@@ -10,7 +10,14 @@ render(
     <Routes>
       <Route path='/' exact element={<App />} />
       <Route path='/expenses' element={<Expenses />} />
-      <Route path='/invoices' element={<Invoices />} />
+      <Route path='/invoices' element={<Invoices />}>
+        <Route index element={
+          <div>
+            <p>Select an invoice</p>
+          </div>
+        } />
+        <Route path=":invoiceId" element={<Invoice />}/>
+      </Route>
       <Route path='*' element={<div>There's nothing here!</div>} />
     </Routes>
   </BrowserRouter>, root
