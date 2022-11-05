@@ -9,7 +9,7 @@ const root = document.getElementById('root');
 render(
   <BrowserRouter>
     <Routes>
-      <Route path='/' exact element={<App />} />
+      <Route path='/' element={<App />} >
       <Route path='/expenses' element={<Expenses />} />
       <Route path='/invoices' element={<Invoices />}>
         <Route index element={
@@ -19,7 +19,8 @@ render(
         } />
         <Route path=":invoiceId" element={<Invoice />}/>
       </Route>
-      <Route path='*' element={<div>There's nothing here!</div>} />
+      <Route path='*' element={<div><p>There's nothing here!</p></div>} />
+      </Route>
     </Routes>
   </BrowserRouter>, root
 );
