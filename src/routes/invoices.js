@@ -8,12 +8,12 @@ export default function Invoices() {
         <div>
             <nav>
                 {invoices.map((invoice) => (
-                    <Link
+                    <NavLink
                         to={`/invoices/${invoice.number}`}
                         key={invoice.number}
                     >
                         {invoice.name}
-                    </Link>
+                    </NavLink>
                 ))}
             </nav>
         </div>
