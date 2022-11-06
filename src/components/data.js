@@ -23,5 +23,7 @@ let invoices = [
 ];
 
 export function getInvoices(){
-    return invoices;
+    return invoices.find(
+        (invoice) => invoice.number === number
+    );
 }

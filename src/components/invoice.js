@@ -3,13 +3,7 @@ import { getInvoices } from "./data";
 
 export default function Invoice(){
     let params = useParams();
-    let invoice = getInvoices(parseInt(params.invoiceId, 10));
     return (
-        <div>
-        <h2>Total Due: {invoice.amount}</h2>;
-        <p>{invoice.name}: {invoice.number}</p>;
-        <h2>Invoice: {params.invoiceId}</h2>;
-        <p>Due Date: {invoice.due}</p>
-    </div>
+        <h2>Invoice: {params.invoiceId}</h2>
     );
 }
