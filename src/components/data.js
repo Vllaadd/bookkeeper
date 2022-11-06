@@ -32,3 +32,8 @@ export function getInvoice(number){
         (invoice) => invoice.number === number
     );
 }
+
+export function deleteInvoice(number){
+    invoices = invoices.filter(
+        (invoice) => invoice.number !== number);
+    }
