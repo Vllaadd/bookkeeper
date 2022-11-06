@@ -1,6 +1,6 @@
 import { Outlet, Link } from "react-router-dom";
 
-function App() {
+export default function App() {
   return (
     <div>
       <h1>Bookkeeper</h1>
@@ -13,5 +13,3 @@ function App() {
     </div>
   );
 }
-
-export default App;
