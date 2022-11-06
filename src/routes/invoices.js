@@ -8,6 +8,7 @@ export default function Invoices() {
     return (
         <div>
             <nav>
+{/*INPUT••••••••••• */}
                 <input
                 value={searchParams.get("filter")}
                 onChange={(event)=>{
@@ -19,6 +20,7 @@ export default function Invoices() {
                     }
                 }}
                 />
+{/*INPUT••••••••••••••••• */}
                 {invoices
                 .filter((invoice)=>{
                     let filter = searchParams.get("filter");
@@ -26,12 +28,14 @@ export default function Invoices() {
                     let name = invoice.name.toLocaleLowerCase();
                     return name.startsWith(filter.toLowerCase())
                 }).map((invoice) => (
+// NAVLINK•••••••••••••••••••
                     <NavLink
                         to={`/invoices/${invoice.number}`}
                         key={invoice.number}
                     >
                         {invoice.name} <br/>
                     </NavLink>
+// NAVLINK••••••••••••••••••••
                 ))}
             </nav>
         </div>
