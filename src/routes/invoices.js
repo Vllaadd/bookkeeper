@@ -1,5 +1,5 @@
 
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import { getInvoices } from "../components/data";
 
 export default function Invoices() {
@@ -12,7 +12,7 @@ export default function Invoices() {
                         to={`/invoices/${invoice.number}`}
                         key={invoice.number}
                     >
-                        {invoice.name}
+                        {invoice.name} <br/>
                     </NavLink>
                 ))}
             </nav>
